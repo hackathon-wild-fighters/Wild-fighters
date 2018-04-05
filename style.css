@@ -19,6 +19,9 @@ header {
     text-transform: uppercase;
 }
 
+*{
+    box-sizing: border-box;
+}
 #main_container {
     display: flex;
     background-color: grey;
@@ -29,20 +32,23 @@ header {
 #left_container {
     display: flex;
     width: 50%;
-    background-color: white;
 }
 
 #right_container {
     display: flex;
     width: 50%;
-    background-color: white;
 }
 
-.perso_grid {
+#perso_grid {
     display: flex;
     flex-wrap: wrap;
     width: 60%;
-    background-color: blue;
+}
+
+#perso_grid2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
 }
 
 .info_container {
@@ -73,10 +79,21 @@ header {
     display: flex;
     width: 33.3%;
     height: 25%;
+    padding : 0.2rem;
+}
+#perso_grid .img_perso.active img{
+    border : 2px solid gold;
+}
+#perso_grid2 .img_perso.active img{
+    border : 2px solid red;
 }
 
+.img_perso.active img{
+    filter : grayscale(0%);
+}
 .img_perso img{
     object-fit: cover;
     object-position: 50% 50%;
     width: 100%;
+    filter : grayscale(100%);
 } 
