@@ -5,12 +5,18 @@ body {
 }
 
 header {
-    width: 100vw;
     height: 10vh;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+    position : absolute;
+    width : 40%;
+    top : 0;
+    z-index : 10;
+    left : 0;
+    right : 0;
+    margin : 0 auto;
 }
 
 .title {
@@ -24,8 +30,8 @@ header {
 }
 #main_container {
     display: flex;
-    background-color: grey;
-    height: 90vh;
+    background-color: #000;
+    height: 93vh;
     width: 100vw;
 }
 
@@ -54,6 +60,7 @@ header {
 .info_container {
     width: 40%;
     background-color: black;
+    padding-top : 14vh;
 }
 
 .title_perso, .title_powers  {
@@ -62,7 +69,6 @@ header {
     font-size: 25px;
     text-align: center;
     text-transform: uppercase;
-    /* text-decoration: underline; */
 }
 
 .info_perso {
@@ -97,3 +103,16 @@ header {
     width: 100%;
     filter : grayscale(100%);
 } 
+footer{
+    display : flex;
+    text-align: center;
+    align-items: center;
+    background-color: #000;
+    height : 7vh;
+}
+footer .footer-side{
+    width : 30%;
+}
+footer .footer-center{
+    width : 40%;
+}
