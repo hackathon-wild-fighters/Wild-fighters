@@ -22,7 +22,14 @@ body {
     background-color: black;
 }
 
-.perso_grid {
+#perso_grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    background-color: blue;
+}
+
+#perso_grid2 {
     display: flex;
     flex-wrap: wrap;
     width: 60%;
