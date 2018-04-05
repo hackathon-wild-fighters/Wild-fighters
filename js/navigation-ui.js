@@ -1,4 +1,4 @@
-export const navigation = () => {
+export const navigation = (poolHeroJ1, poolHeroJ2) => {
     const leftTab = document.querySelectorAll('#perso_grid .img_perso')
     const rightTab = document.querySelectorAll('#perso_grid2 .img_perso')
 
@@ -11,6 +11,32 @@ export const navigation = () => {
     // const screen1
     leftTab[0].classList.add('active')
     rightTab[0].classList.add('active')
+    let player1id = document.querySelector('#perso_grid .active').id
+    let player2id = document.querySelector('#perso_grid2 .active').id
+
+    poolHeroJ1.map(elem => { 
+        if (elem.name === player1id)
+            document.getElementById('info-perso1').innerHTML = `Name : ${elem.name} <br>
+        Combat : ${elem.powerstats.combat} <br>
+        Intelligence : ${elem.powerstats.intelligence} <br>
+        Force : ${elem.powerstats.strength} <br>
+        Vitesse : ${elem.powerstats.speed} <br>
+        Durabilité : ${elem.powerstats.durability} <br>
+        Puissance : ${elem.powerstats.power}
+        `
+    })
+
+    poolHeroJ2.map(elem => { 
+        if (elem.name === player2id)
+            document.getElementById('info-perso2').innerHTML = `Name : ${elem.name}  <br>
+        Combat : ${elem.powerstats.combat} <br>
+        Intelligence : ${elem.powerstats.intelligence} <br>
+        Force : ${elem.powerstats.strength} <br>
+        Vitesse : ${elem.powerstats.speed} <br>
+        Durabilité : ${elem.powerstats.durability} <br>
+        Puissance : ${elem.powerstats.power}
+        `
+    })
 
     window.addEventListener('keydown', (e) => {
         moveCursor(e)
@@ -26,20 +52,62 @@ export const navigation = () => {
         const next2 = activeTabPlayer2.nextElementSibling
         const prev2 = activeTabPlayer2.previousElementSibling
 
+
+
+
+
+
+
+        const injectJ1info = () => {
+            poolHeroJ1.map(elem => { 
+                if (elem.name === player1id)
+                    document.getElementById('info-perso1').innerHTML = `Name : ${elem.name} <br>
+                Combat : ${elem.powerstats.combat} <br>
+                Intelligence : ${elem.powerstats.intelligence} <br>
+                Force : ${elem.powerstats.strength} <br>
+                Vitesse : ${elem.powerstats.speed} <br>
+                Durabilité : ${elem.powerstats.durability} <br>
+                Puissance : ${elem.powerstats.power}
+                `
+            })
+        }
+
+        const injectJ2info = () => {
+            poolHeroJ2.map(elem => { 
+                if (elem.name === player2id)
+                    document.getElementById('info-perso2').innerHTML = `Name : ${elem.name} <br>
+                Combat : ${elem.powerstats.combat} <br>
+                Intelligence : ${elem.powerstats.intelligence} <br>
+                Force : ${elem.powerstats.strength} <br>
+                Vitesse : ${elem.powerstats.speed} <br>
+                Durabilité : ${elem.powerstats.durability} <br>
+                Puissance : ${elem.powerstats.power}
+                `
+            })
+        }
+
         //screen1 UP
         if (e.which === 90) {
             if (currentPositionPlayer1 >= 3) {
                 activeTabPlayer1.classList.remove('active')
                 currentPositionPlayer1 -= 3
                 leftTab[currentPositionPlayer1].classList.add('active')
+                player1id = document.querySelector('#perso_grid .active').id
+                console.log(player1id)
+                injectJ1info()
+
             }
         }
-        //screen1 DOWN
+
         if (e.which === 83) {
             if (currentPositionPlayer1 < 9) {
                 activeTabPlayer1.classList.remove('active')
                 currentPositionPlayer1 += 3
                 leftTab[currentPositionPlayer1].classList.add('active')
+                player1id = document.querySelector('#perso_grid .active').id
+                console.log(player1id)
+                injectJ1info()
+
             }
         }
         //screen1 RIGHT
@@ -48,6 +116,9 @@ export const navigation = () => {
                 activeTabPlayer1.classList.remove('active');
                 next.classList.add('active')
                 currentPositionPlayer1 += 1
+                player1id = document.querySelector('#perso_grid .active').id
+                console.log(player1id)
+                injectJ1info()
             }
         }
         //screen1 LEFT
@@ -56,6 +127,9 @@ export const navigation = () => {
                 activeTabPlayer1.classList.remove('active');
                 prev.classList.add('active')
                 currentPositionPlayer1 -= 1
+                player1id = document.querySelector('#perso_grid .active').id
+                console.log(player1id)
+                injectJ1info()
             }
         }
         //screen2 UP
@@ -64,15 +138,22 @@ export const navigation = () => {
                 activeTabPlayer2.classList.remove('active')
                 currentPositionPlayer2 -= 3
                 rightTab[currentPositionPlayer2].classList.add('active')
+                player2id = document.querySelector('#perso_grid2 .active').id
+                console.log(player2id)
+                injectJ2info()
+
             }
         }
         //screen2 DOWN
         if (e.which === 40) {
             if (currentPositionPlayer2 < 9) {
-                console.log('down')
                 activeTabPlayer2.classList.remove('active')
                 currentPositionPlayer2 += 3
                 rightTab[currentPositionPlayer2].classList.add('active')
+                player2id = document.querySelector('#perso_grid2 .active').id
+                console.log(player2id)
+                injectJ2info()
+
             }
         }
         //screen2 RIGHT
@@ -81,6 +162,10 @@ export const navigation = () => {
                 activeTabPlayer2.classList.remove('active');
                 next2.classList.add('active')
                 currentPositionPlayer2 += 1
+                player2id = document.querySelector('#perso_grid2 .active').id
+                console.log(player2id)
+                injectJ2info()
+
             }
         }
         //screen2 left
@@ -89,6 +174,10 @@ export const navigation = () => {
                 activeTabPlayer2.classList.remove('active');
                 prev2.classList.add('active')
                 currentPositionPlayer2 -= 1
+                player2id = document.querySelector('#perso_grid2 .active').id
+                console.log(player2id)
+                injectJ2info()
+
             }
         }
     }
