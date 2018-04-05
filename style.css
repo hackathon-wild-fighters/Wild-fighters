@@ -1,0 +1,19 @@
+#arena{
+  display:flex;
+
+}
+.bareDeVie1{
+  margin-left: 10%;
+  border:1px solid black;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.bareDeVie2{
+  margin-left: 30%;
+  border:1px solid black;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#superheros{
+  display: flex;
+}
