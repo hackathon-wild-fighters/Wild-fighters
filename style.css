@@ -1,5 +1,5 @@
 #arena{
- background-image: url("images/arena2.jpg");
+ background-image: url("images/budokai.jpg");
   border:2px solid black;
   background-size: cover;
 
@@ -8,7 +8,7 @@
   display:flex;
 }
 .bareDeVie1{
-  margin-left: 10%;
+ text-align: center;
   border:1px solid black;
   padding-left: 10%;
   padding-right: 10%;
@@ -16,7 +16,7 @@
   margin-top: 4%;
 }
 .bareDeVie2{
-  margin-left: 35%;
+  text-align: center;
   border:1px solid black;
   padding-left: 10%;
   padding-right: 10%;
@@ -25,16 +25,16 @@
 }
 #superheros{
   display: flex;
-  margin-top: 25%;
+  margin-top: 30%;
 }
 #hero1{
-  margin-left: 9%;
+
 
   padding-left: 10%;
   padding-right: 10%;
 }
 #hero2{
-  margin-left: 25%;
+
 
   padding-left: 10%;
   padding-right: 10%;
