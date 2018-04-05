@@ -6,12 +6,12 @@ const random = () =>{
 fetch(`https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/${random()}.json`)
 .then(res => res.json())
 .then(resJson =>{
-  console.log(resJson.images.sm)
+
   document.getElementById('hero1').innerHTML = `<img src="${resJson.images.sm}" class="img-fluid" >`
 })
 fetch(`https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/${random()}.json`)
 .then(res => res.json())
 .then(resJson =>{
-  console.log(resJson.images.sm)
+
   document.getElementById('hero2').innerHTML = `<img src="${resJson.images.sm}" class="img-fluid">`
 })
