@@ -1,6 +1,22 @@
 body {
     margin: 0;
     padding: 0;
+    color: white;
+}
+
+header {
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-family: "VT323", monospace;
+    font-size: 50px;
+    text-transform: uppercase;
 }
 
 *{
@@ -8,8 +24,8 @@ body {
 }
 #main_container {
     display: flex;
-    background-color: #000;
-    height: 100vh;
+    background-color: grey;
+    height: 90vh;
     width: 100vw;
 }
 
@@ -37,7 +53,16 @@ body {
 
 .info_container {
     width: 40%;
-    background-color: blueviolet;
+    background-color: black;
+}
+
+.title_perso, .title_powers  {
+    padding: 10px;
+    font-family: "VT323", monospace;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    /* text-decoration: underline; */
 }
 
 .info_perso {
