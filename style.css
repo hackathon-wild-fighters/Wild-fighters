@@ -7,20 +7,17 @@
 .baredevie{
   display:flex;
 }
-.bareDeVie1{
+#bareDeVie1{
  text-align: center;
-  border:1px solid black;
   padding-left: 10%;
   padding-right: 10%;
-  background-color: #33ff33;
   margin-top: 4%;
 }
-.bareDeVie2{
+
+#bareDeVie2{
   text-align: center;
-  border:1px solid black;
   padding-left: 10%;
   padding-right: 10%;
-  background-color: #33ff33;
   margin-top: 4%;
 }
 #superheros{
@@ -43,7 +40,7 @@
   margin-top: 3%
 }
 .powers1{
-  padding-left: 50px !important;
+  padding-left: 100px !important;
 }
 .powers2{
-  padding-left: 50px !important;
+  padding-left: 100px !important;
