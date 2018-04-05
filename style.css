@@ -1,5 +1,5 @@
 #arena{
- background-image: url("images/budokai.jpg");
+ background-image: url("images/arena2.jpg");
   border:2px solid black;
   background-size: cover;
 
@@ -24,8 +24,8 @@
   margin-top: 4%;
 }
 #superheros{
-  display: flex;
-  margin-top: 30%;
+
+  margin-top: 20% !important;
 }
 #hero1{
 
@@ -39,3 +39,11 @@
   padding-left: 10%;
   padding-right: 10%;
 }
+.powers{
+  margin-top: 3%
+}
+.powers1{
+  padding-left: 50px !important;
+}
+.powers2{
+  padding-left: 50px !important;
