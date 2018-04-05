@@ -15,20 +15,20 @@ fetch("https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json")
 
 		document.getElementById('perso_grid').innerHTML = ''
 		poolHeroJ1.map(elem => document.getElementById('perso_grid').innerHTML +=
-			`<div class="img_perso">
-		<img id="${name}" src="${elem.images.sm}">
+			`<div class="img_perso" id="${name}">
+		<img src="${elem.images.sm}">
 		</div>`
 		)
 
 		document.getElementById('perso_grid2').innerHTML = ''
 		poolHeroJ2.map(elem => document.getElementById('perso_grid2').innerHTML +=
-			`<div class="img_perso">
-		<img id="${name}" src="${elem.images.sm}">
+			`<div class="img_perso" id="${name}">
+		<img  src="${elem.images.sm}">
 		</div>`
 		)
 		navigation()
+		let player1id = document.querySelector('#perso_grid .active').id
+		let player2id = document.querySelector('#perso_grid2 .active').id
+		console.log(player1id, player2id)	
 	})
 
-	let player1id = document.querySelector('#perso_grid active').id
-	let player2id = document.querySelector('#perso_grid2 active').id
-	console.log(player1id, player2id)
