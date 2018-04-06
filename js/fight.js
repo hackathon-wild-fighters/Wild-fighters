@@ -62,14 +62,12 @@ power2 = ((J2champ[0].powerstats.power + pouv) + (J2champ[0].powerstats.intellig
 image2 = J2champ[0].images.sm
 document.getElementById('hero2').innerHTML = `<img src="${image2}" class="img-fluid">`
 
-console.log(power2)
 
   let life1 = 100
   let life2 = 100
   const audio = new Audio('songs/coup.mp3');
   const audio2 = new Audio('songs/coup2.mp3');
-  const fightMusic = new Audio('songs/fightMusic.mp3');
-  fightMusic.play()
+
   //  barre de vie
   const lifeBar = (lifeHero, idName, lifeMax) => {
     document.getElementById(idName).innerHTML = `<div class="progress">
