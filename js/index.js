@@ -66,13 +66,21 @@ fetch("https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json")
 	//inject spell j1
 	document.getElementById("info-power1").innerHTML = ''
 	poolSpellJ1.map(elem => document.getElementById("info-power1").innerHTML +=
-		`<div><img class="img_spell" src="${elem.img}"><p>${elem.spell}</p></div>`
+		`<div class="content_spells">
+			<div class="spells_choice">
+				<p class="name_spell">${elem.spell}</p><img class="img_spell2" src="${elem.img}">
+			</div>
+		</div>`
 		)
 
 	//inject spell j2
 	document.getElementById("info-power2").innerHTML = ''
 	poolSpellJ2.map(elem => document.getElementById("info-power2").innerHTML +=
-		`<div><img class="img_spell" src="${elem.img}"><p>${elem.spell}</p></div>`
+		`<div class="content_spells2">
+			<div class="spells_choice">
+				<img class="img_spell" src="${elem.img}"><p class="name_spell">${elem.spell}</p>
+			</div>
+		</div>`
 		)
 
 	i = 0
