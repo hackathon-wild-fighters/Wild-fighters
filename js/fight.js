@@ -41,19 +41,28 @@ export const fight = (J1champ, J2champ) => {
 
   let power1 = ''
   let power2 = ''
-  let pouv = 1
-  let int = 1
-  let force = 1
-  let fight = 1
+  let pouv = J1champ[1].pouvoirSpell + J1champ[2].pouvoirSpell + J1champ[3].pouvoirSpell
+  let int = J1champ[1].intelligenceSpell + J1champ[2].intelligenceSpell + J1champ[3].intelligenceSpell
+  let force = J1champ[1].forceSpell + J1champ[2].forceSpell + J1champ[3].forceSpell  
+  let fight = J1champ[1].fightSpell + J1champ[2].fightSpell + J1champ[3].fightSpell
+
+  let pouv2 = J2champ[1].pouvoirSpell + J2champ[2].pouvoirSpell + J2champ[3].pouvoirSpell
+  let int2 = J2champ[1].intelligenceSpell + J2champ[2].intelligenceSpell + J2champ[3].intelligenceSpell
+  let force2 = J2champ[1].forceSpell + J2champ[2].forceSpell + J2champ[3].forceSpell  
+  let fight2 = J2champ[1].fightSpell + J2champ[2].fightSpell + J2champ[3].fightSpell
+
 
 power1 = ((J1champ[0].powerstats.power + pouv) + (J1champ[0].powerstats.intelligence + int) + (J1champ[0].powerstats.strength + force) + (J1champ[0].powerstats.combat + fight)) / 4
 image1 = J1champ[0].images.sm
 document.getElementById('hero1').innerHTML = `<img src="${image1}" class="img-fluid" >`
 
-power2 = (J2champ[0].powerstats.power + J2champ[0].powerstats.intelligence + J2champ[0].powerstats.strength + J2champ[0].powerstats.combat) / 4
+console.log(power1)
+
+power2 = ((J2champ[0].powerstats.power + pouv) + (J2champ[0].powerstats.intelligence + int) + (J2champ[0].powerstats.strength + force) + (J2champ[0].powerstats.combat + fight)) / 4
 image2 = J2champ[0].images.sm
 document.getElementById('hero2').innerHTML = `<img src="${image2}" class="img-fluid">`
 
+console.log(power2)
 
   let life1 = 100
   let life2 = 100
