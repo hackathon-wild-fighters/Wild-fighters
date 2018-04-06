@@ -1,6 +1,13 @@
 import { fight } from './fight.js'
 
-export const navigation = (poolHeroJ1, poolHeroJ2) => {
+export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => {
+
+    console.log(poolSpellJ1)
+    console.log(poolSpellJ2)
+
+    console.log(poolHeroJ1)
+    console.log(poolHeroJ2)
+
     const leftTab = document.querySelectorAll('#perso_grid .img_perso')
     const rightTab = document.querySelectorAll('#perso_grid2 .img_perso')
 
@@ -10,6 +17,10 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
     const screen1 = document.querySelector('#perso_grid')
     const screen2 = document.querySelector('#perso_grid2')
 
+    const J1champ = []
+    const J2champ = []
+
+    let i = 0
 
 
     let player1selection = undefined
@@ -116,7 +127,6 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
         if (e.which === 90) {
             console.log(player1selection)
             if (currentPositionPlayer1 >= 3 && !player1selection) {
-                console.log('test')
                 activeTabPlayer1.classList.remove('active')
                 currentPositionPlayer1 -= 3
                 leftTab[currentPositionPlayer1].classList.add('active')
@@ -198,33 +208,57 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
                 injectJ2info()
             }
         }
-        // verrouiller son héros J1
-        else if (e.which === 69) {
-            console.log('select')
-            activeTabPlayer1.classList.add('selection')
 
+        // verrouiller son héros J1
+        else if (e.which === 65) {
+            i = 0
+            activeTabPlayer1.classList.add('selection')
             player1id = activeTabPlayer1.id
             player1selection = activeTabPlayer1.id
+            while (poolHeroJ1[i]){
+                if (poolHeroJ1[i].name === player1id){
+                    J1champ[0] = poolHeroJ1[i]
+                    J1champ[1] = poolSpellJ1[0]
+                    J1champ[2] = poolSpellJ1[1]
+                    J1champ[3] = poolSpellJ1[2]
+                }
+                i++
+            }
+            console.log(J1champ)
         }
+
         // verrouiller son héros J2
         else if (e.which === 16) {
+            i = 0
             activeTabPlayer2.classList.add('selection')
             player2id = activeTabPlayer2.id
             player2selection = activeTabPlayer2.id
+            while (poolHeroJ2[i]){
+                if (poolHeroJ2[i].name === player2id){
+                    J2champ[0] = poolHeroJ2[i]
+                    J2champ[1] = poolSpellJ2[0]
+                    J2champ[2] = poolSpellJ2[1]
+                    J2champ[3] = poolSpellJ2[2]
+                }
+                i++
+            }
+            console.log(J2champ)
         }
         // Déverrouiller son héros J1
         else if (e.which === 9 && player1selection) {
             activeTabPlayer1.classList.remove('selection')
             player1selection = undefined
+
         }
+
         // Déverrouiller son héros J2
         else if (e.which === 17 && player2selection) {
             activeTabPlayer2.classList.remove('selection')
             player2selection = undefined
         }
-        // Déverrouiller son héros J1
+        // pret a jouer
         else if (e.which === 32 && player1selection && player2selection) {
-            fight(player1id, player2id, poolHeroJ1, poolHeroJ2)
+            fight(J1champ, J2champ)
         }
 
     }

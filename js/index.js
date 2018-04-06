@@ -67,9 +67,9 @@ fetch("https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json")
 	document.getElementById("info-power1").innerHTML = ''
 	poolSpellJ1.map(elem => document.getElementById("info-power1").innerHTML +=
 		`<div class="content_spells">
-			<div class="spells_choice">
-				<p class="name_spell">${elem.spell}</p><img class="img_spell2" src="${elem.img}">
-			</div>
+		<div class="spells_choice">
+		<p class="name_spell">${elem.spell}</p><img class="img_spell2" src="${elem.img}">
+		</div>
 		</div>`
 		)
 
@@ -77,9 +77,9 @@ fetch("https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json")
 	document.getElementById("info-power2").innerHTML = ''
 	poolSpellJ2.map(elem => document.getElementById("info-power2").innerHTML +=
 		`<div class="content_spells2">
-			<div class="spells_choice">
-				<img class="img_spell" src="${elem.img}"><p class="name_spell">${elem.spell}</p>
-			</div>
+		<div class="spells_choice">
+		<img class="img_spell" src="${elem.img}"><p class="name_spell">${elem.spell}</p>
+		</div>
 		</div>`
 		)
 
@@ -105,6 +105,6 @@ fetch("https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json")
 		</div>`
 		)
 	
-	navigation(poolHeroJ1, poolHeroJ2)
+	navigation(poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2)
 })
 
