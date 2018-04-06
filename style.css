@@ -44,7 +44,7 @@
 }
 
 .dmgEffect {
-  background: url('images/3.png') no-repeat;
+  background: url('3.png') no-repeat;
   background-size: 80%;
   opacity: 1;
 	-webkit-animation: flash 3.0s;
@@ -69,6 +69,6 @@
 .gameover{
   color:red;
   font-size: 100px;
-  padding-left: -10px;
+  
 }
 
