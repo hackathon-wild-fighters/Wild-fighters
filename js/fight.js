@@ -1,4 +1,4 @@
-export const fight = (player1id, player2id, poolHeroJ1, poolHeroJ2) => {
+export const fight = (J1champ, J2champ) => {
   const random = () => {
     return Math.floor(Math.random() * (500 - 1) + 1)
   }
@@ -46,21 +46,20 @@ export const fight = (player1id, player2id, poolHeroJ1, poolHeroJ2) => {
   let force = 1
   let fight = 1
 
-  power1 = ((resJson.powerstats.power + pouv) + (resJson.powerstats.intelligence + int) + (resJson.powerstats.strength + force) + (resJson.powerstats.combat + fight)) / 4
-  image1 = resJson.images.sm
-  document.getElementById('hero1').innerHTML = `<img src="${resJson.images.sm}" class="img-fluid" >`
+  power1 = ((J1champ.powerstats.power + pouv) + (J1champ.powerstats.intelligence + int) + (J1champ.powerstats.strength + force) + (J1champ.powerstats.combat + fight)) / 4
+  // image1 = resJson.images.sm
+ //document.getElementById('hero1').innerHTML = `<img src="${J1champ.images.sm}" class="img-fluid" >`
 
-  power2 = (resJson.powerstats.power + resJson.powerstats.intelligence + resJson.powerstats.strength + resJson.powerstats.combat) / 4
-  image2 = resJson.images.sm
-  document.getElementById('hero2').innerHTML = `<img src="${resJson.images.sm}" class="img-fluid">`
+power2 = (J2champ.powerstats.power + J2champ.powerstats.intelligence + J2champ.powerstats.strength + J2champ.powerstats.combat) / 4
+  // image2 = resJson.images.sm
+  // document.getElementById('hero2').innerHTML = `<img src="${resJson.images.sm}" class="img-fluid">`
 
 
   let life1 = 100
   let life2 = 100
   const audio = new Audio('songs/coup.mp3');
   const audio2 = new Audio('songs/coup2.mp3');
-  const MusicMenu = new Audio('songs/menuMusic.mp3');
-  MusicMenu.play()
+
   //  barre de vie
   const lifeBar = (lifeHero, idName, lifeMax) => {
     document.getElementById(idName).innerHTML = `<div class="progress">
@@ -125,7 +124,7 @@ style="width: ${lifeMax}%">${lifeHero}%
   document.addEventListener('keydown', (event) => {
     let keyName = event.key
     console.log(event.key)
-    if (keyName === 'ArrowUp') {
+    if (keyName === 'ArrowDown') {
       life1 -= Math.floor(power1 / 5)
       console.log(life1)
       audio.play();
@@ -149,7 +148,7 @@ style="width: ${lifeMax}%">${lifeHero}%
   document.addEventListener('keydown', (event) => {
     let keyName = event.key
     console.log(event.key)
-    if (keyName === 's') {
+    if (keyName === 'q') {
       life2 -= Math.floor(power2 / 5)
       console.log(life2)
       audio2.play();
@@ -171,7 +170,7 @@ style="width: ${lifeMax}%">${lifeHero}%
   document.addEventListener('keydown', (event) => {
     let keyName = event.key
     console.log(event.key)
-    if (keyName === 'f') {
+    if (keyName === 'd') {
       life2 -= Math.floor(power2 / 5)
       console.log(life2)
       audio2.play();
@@ -193,7 +192,7 @@ style="width: ${lifeMax}%">${lifeHero}%
   document.addEventListener('keydown', (event) => {
     let keyName = event.key
     console.log(event.key)
-    if (keyName === 'e') {
+    if (keyName === 's') {
       life2 -= Math.floor(power2 / 5)
       console.log(life2)
       audio2.play();

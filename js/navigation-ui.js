@@ -1,12 +1,9 @@
 import { fight } from './fight.js'
 
 export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => {
+    const MusicMenu = new Audio('songs/menuMusic.mp3');
 
-    console.log(poolSpellJ1)
-    console.log(poolSpellJ2)
-
-    console.log(poolHeroJ1)
-    console.log(poolHeroJ2)
+    MusicMenu.play()
 
     const leftTab = document.querySelectorAll('#perso_grid .img_perso')
     const rightTab = document.querySelectorAll('#perso_grid2 .img_perso')
@@ -21,7 +18,6 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
     const J2champ = []
 
     let i = 0
-
 
     let player1selection = undefined
     let player2selection = undefined
@@ -210,21 +206,14 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
         }
 
         // verrouiller son héros J1
-        else if (e.which === 65) {
+        else if (e.which === 69) {
             i = 0
             activeTabPlayer1.classList.add('selection')
             player1id = activeTabPlayer1.id
             player1selection = activeTabPlayer1.id
-            while (poolHeroJ1[i]){
-                if (poolHeroJ1[i].name === player1id){
-                    J1champ[0] = poolHeroJ1[i]
-                    J1champ[1] = poolSpellJ1[0]
-                    J1champ[2] = poolSpellJ1[1]
-                    J1champ[3] = poolSpellJ1[2]
-                }
-                i++
+            if (player2selection) {
+                document.querySelector('.footer-center').classList.add('active')
             }
-            console.log(J1champ)
         }
 
         // verrouiller son héros J2
@@ -233,6 +222,24 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
             activeTabPlayer2.classList.add('selection')
             player2id = activeTabPlayer2.id
             player2selection = activeTabPlayer2.id
+            if (player1selection) {
+                document.querySelector('.footer-center').classList.add('active')
+            }
+        }
+        // Déverrouiller son héros J1
+        else if (e.which === 27 && player1selection) {
+            activeTabPlayer1.classList.remove('selection')
+            player1selection = undefined
+        }
+
+        // Déverrouiller son héros J2
+        else if (e.which === 17 && player2selection) {
+            activeTabPlayer2.classList.remove('selection')
+            player2selection = undefined
+        }
+
+        // Lancement du jeu
+        else if (e.which === 32 && player1selection && player2selection) {
             while (poolHeroJ2[i]){
                 if (poolHeroJ2[i].name === player2id){
                     J2champ[0] = poolHeroJ2[i]
@@ -242,23 +249,21 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
                 }
                 i++
             }
-            console.log(J2champ)
-        }
-        // Déverrouiller son héros J1
-        else if (e.which === 9 && player1selection) {
-            activeTabPlayer1.classList.remove('selection')
-            player1selection = undefined
-
-        }
-
-        // Déverrouiller son héros J2
-        else if (e.which === 17 && player2selection) {
-            activeTabPlayer2.classList.remove('selection')
-            player2selection = undefined
-        }
-        // pret a jouer
-        else if (e.which === 32 && player1selection && player2selection) {
+            i = 0
+            while (poolHeroJ1[i]){
+                if (poolHeroJ1[i].name === player1id){
+                    J1champ[0] = poolHeroJ1[i]
+                    J1champ[1] = poolSpellJ1[0]
+                    J1champ[2] = poolSpellJ1[1]
+                    J1champ[3] = poolSpellJ1[2]
+                }
+                i++
+            }
             fight(J1champ, J2champ)
+            document.querySelector('#main_container').style.display = "none"
+            document.querySelector('#main').style.display = "block"
+            document.querySelector('.footer-left').innerHTML = '[Q, S, D] pour attaquer'            
+            document.querySelector('.footer-right').innerHTML = '[ ◄   ▼   ► ] pour attaquer'
         }
 
     }
