@@ -9,11 +9,11 @@ export const fight = (J1champ, J2champ) => {
   document.getElementById('main').innerHTML = `<div id="arena${randomBackground()}">
 <div class="container-fluid">
 <div class="baredevie row">
-  <div id= "bareDeVie1" class=" col-5">100%</div>
-  <div id= "bareDeVie2" class="col-5 offset-1">100%</div>
+  <div id= "bareDeVie1" class="col-6">100%</div>
+  <div id= "bareDeVie2" class="col-6">100%</div>
 </div>
 <div class="powers row">
-  <div class="powers1 col-6 ">
+  <div class="powers1 col-6">
     <div class="container-fluid spell" >
     <img src="${J1champ[1].img}" class="img-fluid col-2 offset-1" alt="" >
     <img src="${J1champ[2].img}" class="img-fluid col-2 " alt="">
