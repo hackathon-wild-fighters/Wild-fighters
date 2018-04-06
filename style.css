@@ -1,48 +1,48 @@
 #arena8{
- background-image: url("images/arena2.jpg");
+ background-image: url("images/arena2.gif");
   border:2px solid black;
   background-size: cover;
 
 }
 #arena1{
-  background-image: url("images/arena3.jpg");
+  background-image: url("images/arena3.gif");
    border:2px solid black;
    background-size: cover;
  
  }
  #arena2{
-  background-image: url("images/arena4.jpg");
+  background-image: url("images/arena4.gif");
    border:2px solid black;
    background-size: cover;
  
  }
  #arena3{
-  background-image: url("images/arena5.jpg");
+  background-image: url("images/arena5.gif");
    border:2px solid black;
    background-size: cover;
  
  }
  #arena4{
-  background-image: url("images/arena6.jpg");
+  background-image: url("images/arena6.gif");
    border:2px solid black;
    background-size: cover;
  
  }
  #arena5{
-  background-image: url("images/arena7.png");
+  background-image: url("images/arena7.gif");
    border:2px solid black;
    background-size: cover;
  
  }
  #arena6{
-  background-image: url("images/arena8.jpg");
+  background-image: url("images/arena8.gif");
    border:2px solid black;
    background-size: cover;
  
  }
 
  #arena7{
-  background-image: url("images/arena9.jpg");
+  background-image: url("images/arena9.gif");
    border:2px solid black;
    background-size: cover;
  
@@ -71,6 +71,24 @@
   padding-left: 10%;
   padding-right: 10%;
 }
+
+#hero1 img {
+  border: 5px solid #EFFF00;
+  -moz-box-shadow: 8px 8px 12px #EFFF00; 
+  -webkit-box-shadow: 8px 8px 12px #EFFF00; 
+  box-shadow: 3px 3px 30px #FFFFFF; 
+  margin-bottom: 100px;
+
+}
+
+#hero2 img {
+  border: 5px solid #EFFF00;
+  -moz-box-shadow: 8px 8px 12px #EFFF00; 
+  -webkit-box-shadow: 8px 8px 12px #EFFF00; 
+  box-shadow: 3px 3px 30px #FFFFFF; 
+  margin-bottom: 100px;
+}
+
 
 #hero2{
   padding-left: 10%;
