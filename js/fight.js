@@ -59,7 +59,8 @@ power2 = (J2champ.powerstats.power + J2champ.powerstats.intelligence + J2champ.p
   let life2 = 100
   const audio = new Audio('songs/coup.mp3');
   const audio2 = new Audio('songs/coup2.mp3');
-
+  const fightMusic = new Audio('songs/fightMusic.mp3');
+  fightMusic.play()
   //  barre de vie
   const lifeBar = (lifeHero, idName, lifeMax) => {
     document.getElementById(idName).innerHTML = `<div class="progress">

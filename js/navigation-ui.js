@@ -2,9 +2,9 @@ import { fight } from './fight.js'
 
 export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => {
     const MusicMenu = new Audio('songs/menuMusic.mp3');
-
+    const SelectSong = new Audio('songs/selectedPlayer.mp3');
     MusicMenu.play()
-
+    SelectSong.play()
     const leftTab = document.querySelectorAll('#perso_grid .img_perso')
     const rightTab = document.querySelectorAll('#perso_grid2 .img_perso')
 
@@ -120,9 +120,10 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
         }
 
         //screen1 UP
-        if (e.which === 90) {
+        if (e.which === 90) { 
             console.log(player1selection)
             if (currentPositionPlayer1 >= 3 && !player1selection) {
+                SelectSong.play()
                 activeTabPlayer1.classList.remove('active')
                 currentPositionPlayer1 -= 3
                 leftTab[currentPositionPlayer1].classList.add('active')
@@ -134,6 +135,7 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
         //screen1 DOWN
         else if (e.which === 83) {
             if (currentPositionPlayer1 < 9 && !player1selection) {
+                SelectSong.play()
                 activeTabPlayer1.classList.remove('active')
                 currentPositionPlayer1 += 3
                 leftTab[currentPositionPlayer1].classList.add('active')
@@ -145,6 +147,7 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
         //screen1 RIGHT
         else if (e.which === 68) {
             if (currentPositionPlayer1 < 11 && !player1selection) {
+                SelectSong.play()
                 activeTabPlayer1.classList.remove('active');
                 next.classList.add('active')
                 currentPositionPlayer1 += 1
@@ -154,8 +157,9 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
         }
 
         //screen1 LEFT
-        else if (e.which === 81) {
+        else if (e.which === 81) { 
             if (currentPositionPlayer1 > 0 && !player1selection) {
+                SelectSong.play()
                 activeTabPlayer1.classList.remove('active');
                 prev.classList.add('active')
                 currentPositionPlayer1 -= 1
@@ -167,6 +171,7 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
         //screen2 UP
         else if (e.which === 38) {
             if (currentPositionPlayer2 >= 3 && !player2selection) {
+                SelectSong.play()
                 activeTabPlayer2.classList.remove('active')
                 currentPositionPlayer2 -= 3
                 rightTab[currentPositionPlayer2].classList.add('active')
@@ -177,6 +182,7 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
         //screen2 DOWN
         else if (e.which === 40) {
             if (currentPositionPlayer2 < 9 && !player2selection) {
+                SelectSong.play()
                 activeTabPlayer2.classList.remove('active')
                 currentPositionPlayer2 += 3
                 rightTab[currentPositionPlayer2].classList.add('active')
@@ -187,6 +193,7 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
         //screen2 RIGHT
         else if (e.which === 39) {
             if (currentPositionPlayer2 < 11 && !player2selection) {
+                SelectSong.play()
                 activeTabPlayer2.classList.remove('active');
                 next2.classList.add('active')
                 currentPositionPlayer2 += 1
@@ -197,6 +204,7 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
         //screen2 left
         else if(e.which === 37) {
             if (currentPositionPlayer2 > 0 && !player2selection) {
+                SelectSong.play()
                 activeTabPlayer2.classList.remove('active')
                 prev2.classList.add('active')
                 currentPositionPlayer2 -= 1
