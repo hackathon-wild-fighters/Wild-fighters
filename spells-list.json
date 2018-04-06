@@ -1,0 +1,36 @@
+[
+	{"spell" : "tourbillon de lames", "img" : "./icons_spells/tourbillonDeLames.jpg"},
+	{"spell" : "toucher corrosif", "img" : "./icons_spells/toucherCorrosif.jpg"},
+	{"spell" : "toucher contaminé", "img" : "./icons_spells/toucherContamine.jpg"},
+	{"spell" : "Terres brûlées", "img" : "./icons_spells/terresBrulees.jpg"},
+	{"spell" : "souffle de glace", "img" : "./icons_spells/.jpg"},
+	{"spell" : "Rayon plasma", "img" : "./icons_spells/rayonPlasma.jpg"},
+	{"spell" : "putréfaction", "img" : "./icons_spells/putrefaction.jpg"},
+	{"spell" : "points de suture", "img" : "./icons_spells/pointsDeSuture.jpg"},
+	{"spell" : "pluie de feu", "img" : "./icons_spells/pluieDeFeu.jpg"},
+	{"spell" : "Nuage de poison", "img" : "./icons_spells/nuageDePoison.jpg"},
+	{"spell" : "mur de flamme", "img" : "./icons_spells/murDeFlamme.jpg"},
+	{"spell" : "hachoir", "img" : "./icons_spells/hachoir.jpg"},
+	{"spell" : "gel", "img" : "./icons_spells/gel.jpg"},
+	{"spell" : "Fulgurance des arcanes", "img" : "./icons_spells/fulguranceDesArcanes.jpg"},
+	{"spell" : "Exécution", "img" : "./icons_spells/execution.jpg"},
+	{"spell" : "étreinte fantomatique", "img" : "./icons_spells/etreinteFantomatique.jpg"},
+	{"spell" : "entailles sanglantes", "img" : "./icons_spells/entaillesSanglantes.jpg"},
+	{"spell" : "énergie pure", "img" : "./icons_spells/energiePure.jpg"},
+	{"spell" : "energie noire", "img" : "./icons_spells/energieNoire.jpg"},
+	{"spell" : "crochet sanglant", "img" : "./icons_spells/crochetSanglant.jpg"},
+	{"spell" : "chaine d'éclairs", "img" : "./icons_spells/chaineEclairs.jpg"},
+	{"spell" : "caresse élémentaire", "img" : "./icons_spells/caresseElementaire.jpg"},
+	{"spell" : "brise-crâne", "img" : "./icons_spells/briseCrane.jpg"},
+	{"spell" : "brasier elementaire", "img" : "./icons_spells/brasierElementaire.jpg"},
+	{"spell" : "attaque toxique", "img" : "./icons_spells/attaqueToxique.jpg"},
+	{"spell" : "attaque du phénix", "img" : "./icons_spells/attaqueDuPhenix.jpg"},
+	{"spell" : "attaque cérébral", "img" : "./icons_spells/attaqueCerebral.jpg"},
+	{"spell" : "pluie de plasma", "img" : "./icons_spells/pluieDePlasma.jpg"},
+	{"spell" : "mauvais contact", "img" : "./icons_spells/mauvaisContact.jpg"}
+]
+
+
+
+
+
