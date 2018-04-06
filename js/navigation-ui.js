@@ -1,6 +1,10 @@
 import { fight } from './fight.js'
 
 export const navigation = (poolHeroJ1, poolHeroJ2) => {
+    const MusicMenu = new Audio('songs/menuMusic.mp3');
+
+    MusicMenu.play()
+
     const leftTab = document.querySelectorAll('#perso_grid .img_perso')
     const rightTab = document.querySelectorAll('#perso_grid2 .img_perso')
 
@@ -9,8 +13,6 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
 
     const screen1 = document.querySelector('#perso_grid')
     const screen2 = document.querySelector('#perso_grid2')
-
-
 
     let player1selection = undefined
     let player2selection = undefined
@@ -202,18 +204,23 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
         else if (e.which === 69) {
             console.log('select')
             activeTabPlayer1.classList.add('selection')
-
             player1id = activeTabPlayer1.id
             player1selection = activeTabPlayer1.id
+            if (player2selection) {
+                document.querySelector('.footer-center').classList.add('active')
+            }
         }
         // verrouiller son héros J2
         else if (e.which === 16) {
             activeTabPlayer2.classList.add('selection')
             player2id = activeTabPlayer2.id
             player2selection = activeTabPlayer2.id
+            if (player1selection) {
+                document.querySelector('.footer-center').classList.add('active')
+            }
         }
         // Déverrouiller son héros J1
-        else if (e.which === 9 && player1selection) {
+        else if (e.which === 27 && player1selection) {
             activeTabPlayer1.classList.remove('selection')
             player1selection = undefined
         }
@@ -222,9 +229,13 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
             activeTabPlayer2.classList.remove('selection')
             player2selection = undefined
         }
-        // Déverrouiller son héros J1
+        // Lancement du jeu
         else if (e.which === 32 && player1selection && player2selection) {
-            fight(player1id, player2id, poolHeroJ1, poolHeroJ2)
+            // fight(player1id, player2id, poolHeroJ1, poolHeroJ2)
+            document.querySelector('#main_container').style.display = "none"
+            document.querySelector('#main').style.display = "block"
+            document.querySelector('.footer-left').innerHTML = '[Q, S, D] pour attaquer'            
+            document.querySelector('.footer-right').innerHTML = '[ ◄   ▼   ► ] pour attaquer'
         }
 
     }

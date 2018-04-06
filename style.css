@@ -33,7 +33,7 @@ header {
     display: flex;
     background-color: #000;
     height: 93vh;
-    width: 100vw;
+    width: 100%;
 }
 
 #left_container {
@@ -216,7 +216,8 @@ footer{
     font-size: 20px;
     text-transform: uppercase; 
 }
-footer .footer-side{
+footer .footer-left, 
+footer .footer-right{
     width: 30%;
 }
 
