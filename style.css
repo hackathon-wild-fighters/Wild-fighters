@@ -147,5 +147,25 @@ body {
   font-size: 100px;
   margin-top: -10px;
   
+  
 }
+.dmg2{
+  background: url('3.png') no-repeat;
+  background-size: 80%;
+}
+.dmg2>img{
+  transform: rotate(180deg) scale(0.50);
+}
+
+.dmg3{
+  background: url('3.png') no-repeat;
+  background-size: 80%;
+}
+.dmg3>img{
+  transform: rotate(90deg) scale(0.90);
+}
+.gagne{
+  transform: scale(2);
+}
+
 
