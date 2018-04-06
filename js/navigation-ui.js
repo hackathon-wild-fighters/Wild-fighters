@@ -267,6 +267,7 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
                 }
                 i++
             }
+            MusicMenu.pause()
             fight(J1champ, J2champ)
             document.querySelector('#main_container').style.display = "none"
             document.querySelector('#main').style.display = "block"
