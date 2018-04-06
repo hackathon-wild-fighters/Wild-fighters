@@ -271,6 +271,7 @@ export const navigation = (poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2) => 
             fight(J1champ, J2champ)
             document.querySelector('#main_container').style.display = "none"
             document.querySelector('#main').style.display = "block"
+            document.querySelector('.footer-center').innerHTML = ''
             document.querySelector('.footer-left').innerHTML = '[Q, S, D] pour attaquer'            
             document.querySelector('.footer-right').innerHTML = '[ ◄   ▼   ► ] pour attaquer'
         }
