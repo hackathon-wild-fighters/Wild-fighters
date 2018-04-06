@@ -142,7 +142,9 @@ header {
 #perso_grid .img_perso.active img{
     border: 2px solid gold;
 }
-
+#main_container .img_perso.active.selection img{
+    border: 4px solid green;
+}
 #perso_grid2 .img_perso.active img{
     border: 2px solid red;
 }

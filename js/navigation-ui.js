@@ -1,3 +1,5 @@
+import { fight } from './fight.js'
+
 export const navigation = (poolHeroJ1, poolHeroJ2) => {
     const leftTab = document.querySelectorAll('#perso_grid .img_perso')
     const rightTab = document.querySelectorAll('#perso_grid2 .img_perso')
@@ -198,7 +200,9 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
         }
         // verrouiller son héros J1
         else if (e.which === 69) {
+            console.log('select')
             activeTabPlayer1.classList.add('selection')
+
             player1id = activeTabPlayer1.id
             player1selection = activeTabPlayer1.id
         }
@@ -220,7 +224,7 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
         }
         // Déverrouiller son héros J1
         else if (e.which === 32 && player1selection && player2selection) {
-            console.log('start')
+            fight(player1id, player2id, poolHeroJ1, poolHeroJ2)
         }
 
     }

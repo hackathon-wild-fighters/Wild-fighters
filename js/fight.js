@@ -1,4 +1,4 @@
-export const fight = () => {
+export const fight = (player1id, player2id, poolHeroJ1, poolHeroJ2) => {
   const random = () => {
     return Math.floor(Math.random() * (500 - 1) + 1)
   }
@@ -46,27 +46,14 @@ export const fight = () => {
   let force = 1
   let fight = 1
 
-  /* "intelligence": 88,
-        "strength": 28,
-        "speed": 35,
-        "durability": 65,
-        "power": 100,
-        "combat": 85*/
-
-  // fetch(`https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/${random()}.json`)
-  //   .then(res => res.json())
-  //   .then(resJson => {
   power1 = ((resJson.powerstats.power + pouv) + (resJson.powerstats.intelligence + int) + (resJson.powerstats.strength + force) + (resJson.powerstats.combat + fight)) / 4
   image1 = resJson.images.sm
   document.getElementById('hero1').innerHTML = `<img src="${resJson.images.sm}" class="img-fluid" >`
-  // })
-  // fetch(`https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/${random()}.json`)
-  //   .then(res => res.json())
-  //   .then(resJson => {
+
   power2 = (resJson.powerstats.power + resJson.powerstats.intelligence + resJson.powerstats.strength + resJson.powerstats.combat) / 4
   image2 = resJson.images.sm
   document.getElementById('hero2').innerHTML = `<img src="${resJson.images.sm}" class="img-fluid">`
-  // })
+
 
   let life1 = 100
   let life2 = 100
