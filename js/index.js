@@ -2,6 +2,39 @@ const random = () => {
   return Math.floor(Math.random() * (500 - 1) + 1)
 }
 
+const randomBackground =() =>{
+  return Math.floor(Math.random()*(9-1)+1)
+}
+document.getElementById('main').innerHTML =`<div id="arena${randomBackground()}">
+<div class="container-fluid">
+<div class="baredevie row">
+  <div id= "bareDeVie1" class=" col-5">100%</div>
+  <div id= "bareDeVie2" class="col-5 offset-1">100%</div>
+</div>
+<div class="powers row">
+  <div class="powers1 col-6 ">
+    <div class="container-fluid">
+    <img src="icons_spells/attaque cérébral.jpg" class="img-fluid col-2 offset-1" alt="" >
+    <img src="icons_spells/attaque du phénix.jpg" class="img-fluid col-2 " alt="">
+    <img src="icons_spells/attaque toxique.jpg" class="img-fluid col-2" alt="">
+    </div>
+  </div>
+
+
+  <div class="powers2 col-6">
+    <div class="container-fluid">
+    <img src="icons_spells/pluie de feu.jpg" alt="" class="img-fluid col-2 offset-1">
+    <img src="icons_spells/énergie pure.jpg" alt="" class="img-fluid col-2">
+    <img src="icons_spells/hachoir.jpg" alt="" class="img-fluid col-2">
+  </div>
+  </div>
+</div>
+<div id="superheros" class="row">
+  <div id="hero1" class="col-4 offset-1"></div>
+  <div id="hero2" class="col-4 offset-2"></div>
+</div>
+</div>
+</div>`
 let image1 = ''
 let image2 = ''
 

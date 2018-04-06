@@ -1,9 +1,52 @@
-#arena{
+#arena8{
  background-image: url("images/arena2.jpg");
   border:2px solid black;
   background-size: cover;
 
 }
+#arena1{
+  background-image: url("images/arena3.jpg");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+ #arena2{
+  background-image: url("images/arena4.jpg");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+ #arena3{
+  background-image: url("images/arena5.jpg");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+ #arena4{
+  background-image: url("images/arena6.jpg");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+ #arena5{
+  background-image: url("images/arena7.png");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+ #arena6{
+  background-image: url("images/arena8.jpg");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+
+ #arena7{
+  background-image: url("images/arena9.jpg");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
 .baredevie{
   display:flex;
 }
@@ -22,7 +65,7 @@
 }
 #superheros{
 
-  margin-top: 25% !important;
+  margin-top: 23% !important;
 }
 #hero1{
   padding-left: 10%;
@@ -69,6 +112,7 @@
 .gameover{
   color:red;
   font-size: 100px;
+  margin-top: -10px;
   
 }
 
