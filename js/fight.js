@@ -15,7 +15,7 @@ export const fight = (J1champ, J2champ) => {
 <div class="powers row">
   <div class="powers1 col-6">
     <div class="container-fluid spell" >
-    <img src="${J1champ[1].img}" class="img-fluid col-2 offset-1" alt="" >
+    <img src="${J1champ[1].img}" class="img-fluid col-2" alt="" >
     <img src="${J1champ[2].img}" class="img-fluid col-2 " alt="">
     <img src="${J1champ[3].img}" class="img-fluid col-2" alt="">
     </div>
@@ -24,15 +24,15 @@ export const fight = (J1champ, J2champ) => {
 
   <div class="powers2 col-6">
     <div class="container-fluid spell">
-    <img src="${J2champ[1].img}" alt="" class="img-fluid col-2 offset-1">
+    <img src="${J2champ[1].img}" alt="" class="img-fluid col-2">
     <img src="${J2champ[2].img}" alt="" class="img-fluid col-2">
     <img src="${J2champ[3].img}" alt="" class="img-fluid col-2">
   </div>
   </div>
 </div>
 <div id="superheros" class="row">
-  <div id="hero1" class="col-4 offset-1"></div>
-  <div id="hero2" class="col-4 offset-2"></div>
+  <div id="hero1" class="col-6"></div>
+  <div id="hero2" class="col-6"></div>
 </div>
 </div>
 </div>`
@@ -98,14 +98,14 @@ style="width: ${lifeMax}%">${lifeHero}%
         lifeBar(life1, 'bareDeVie1', life1)
 
         document.getElementById('superheros').innerHTML = `
-    <div id="hero1" class="col-4 offset-1 dmgEffect"><img src="${image1}" class="img-fluid"></div>
-    <div id="hero2" class="col-4 offset-2"><img src="${image2}" class="img-fluid"></div>
+    <div id="hero1" class="col-4 dmgEffect"><img src="${image1}" class="img-fluid"></div>
+    <div id="hero2" class="col-4"><img src="${image2}" class="img-fluid"></div>
     `
       } else {
         lifeBar(0, 'bareDeVie1', 0)
         document.getElementById('superheros').innerHTML = `
-    <div id="hero1" class="col-4 offset-1  gameover">GAME OVER</div>
-    <div id="hero2" class="col-4 offset-2 gagne"><img src="${image2}" class="img-fluid"></div>
+    <div id="hero1" class="col-4  gameover">GAME OVER</div>
+    <div id="hero2" class="col-4 gagne"><img src="${image2}" class="img-fluid"></div>
     `}
 
     }

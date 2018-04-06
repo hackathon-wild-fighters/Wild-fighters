@@ -134,12 +134,12 @@ header {
 
 .info_perso {
     width: 100%;
-    height: 55%;
+    height: 65%;
 }
 
 .info_powers {
     width: 100%;
-    height: 45%;
+    height: 35%;
 }
 
 .img_perso {
@@ -322,13 +322,16 @@ footer .footer-center.active {
 }
 
 #superheros {
-    height: 380px;
+    height: 450px;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #hero1 {
     padding-left: 10%;
     padding-right: 10%;
-    align-self: flex-end;
+    text-align: center;
+
 }
 
 #hero1 img {
@@ -348,7 +351,7 @@ footer .footer-center.active {
 #hero2 {
     padding-left: 10%;
     padding-right: 10%;
-    align-self: flex-end;
+    text-align: center;
 }
 
 .powers {
@@ -356,11 +359,11 @@ footer .footer-center.active {
 }
 
 .powers1 {
-    padding-left: 150px !important;
+    text-align : center;
 }
 
 .powers2 {
-    padding-left: 150px !important;
+    text-align : center;
 }
 
 .spell img {
@@ -402,8 +405,8 @@ footer .footer-center.active {
 .gameover {
     color: red;
     font-size: 100px;
-    margin-top: -10px;
     font-family: "VT323", monospace;
+    line-height : 1;
 }
 
 .dmg2 {
@@ -425,5 +428,5 @@ footer .footer-center.active {
 }
 
 .gagne {
-    transform: scale(2);
+    transform: scale(1.3);
 }
