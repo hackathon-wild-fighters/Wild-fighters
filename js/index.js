@@ -42,26 +42,28 @@ fetch("https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json")
 	let i = 0
 
 	//random spell * 3
-	const fillPoolSpell = poolSpell => 
-	{
+	const fillPoolSpell = poolSpell => {
+		poolSpell = []
 		let j = 0
-		let lol
+		let spell
 		while (poolSpell.length < 3)
 		{
-			lol = spells[(Math.floor(Math.random() * 29))]
-			if (poolSpell.includes(lol))
-				lol = spells[(Math.floor(Math.random() * 29))]
+			spell = spells[(Math.floor(Math.random() * 29))]
+			if (poolSpell.includes(spell))
+				spell = spells[(Math.floor(Math.random() * 29))]
 
 			else
 			{
-				poolSpell[j] = lol
+				poolSpell[j] = spell
 				j++
 			}
 		}
+		return poolSpell
 	}
 
-	fillPoolSpell(poolSpellJ1)
-	fillPoolSpell(poolSpellJ2)
+
+
+
 
 	//inject spell j1
 	document.getElementById("info-power1").innerHTML = ''
@@ -87,7 +89,12 @@ fetch("https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json")
 	// random champ * 12
 	while (i < 12) {
 		poolHeroJ1[i] = json[(Math.floor(Math.random() * 563))]
+		poolSpellJ1 = fillPoolSpell(poolSpellJ1)
+		poolHeroJ1[i].spells = poolSpellJ1
+
 		poolHeroJ2[i] = json[(Math.floor(Math.random() * 563))]
+		poolSpellJ2 = fillPoolSpell(poolSpellJ2)
+		poolHeroJ2[i].spells = poolSpellJ2
 		i++
 	}
 
@@ -104,7 +111,9 @@ fetch("https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json")
 		<img  src="${elem.images.sm}">
 		</div>`
 		)
-	
+
+	console.log(poolHeroJ1)
+	console.log(poolHeroJ2)
 	navigation(poolSpellJ1, poolSpellJ2, poolHeroJ1, poolHeroJ2)
 })
 
