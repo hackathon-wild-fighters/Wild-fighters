@@ -229,6 +229,9 @@ footer .footer-center.active {
     color: green;
 }
 
+#main{
+    display : none;
+}
 #arena8{
  background-image: url("images/arena2.gif");
   border:2px solid black;
