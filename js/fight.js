@@ -68,6 +68,12 @@ document.getElementById('hero2').innerHTML = `<img src="${image2}" class="img-fl
   const audio = new Audio('songs/coup.mp3');
   const audio2 = new Audio('songs/coup2.mp3');
 
+  const fightMusic = new Audio('songs/fightMusic.mp3');
+  const teleport = new Audio('songs/teleport.mp3');
+  teleport.play()
+  fightMusic.play()
+
+
   //  barre de vie
   const lifeBar = (lifeHero, idName, lifeMax) => {
     document.getElementById(idName).innerHTML = `<div class="progress">
