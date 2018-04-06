@@ -2,7 +2,7 @@ export const fight = (J1champ, J2champ) => {
   const random = () => {
     return Math.floor(Math.random() * (500 - 1) + 1)
   }
-
+  console.log(J1champ, J2champ)
   const randomBackground = () => {
     return Math.floor(Math.random() * (9 - 1) + 1)
   }
@@ -15,18 +15,18 @@ export const fight = (J1champ, J2champ) => {
 <div class="powers row">
   <div class="powers1 col-6 ">
     <div class="container-fluid spell" >
-    <img src="icons_spells/attaque cérébral.jpg" class="img-fluid col-2 offset-1" alt="" >
-    <img src="icons_spells/attaque du phénix.jpg" class="img-fluid col-2 " alt="">
-    <img src="icons_spells/attaque toxique.jpg" class="img-fluid col-2" alt="">
+    <img src="${J1champ[1].img}" class="img-fluid col-2 offset-1" alt="" >
+    <img src="${J1champ[2].img}" class="img-fluid col-2 " alt="">
+    <img src="${J1champ[3].img}" class="img-fluid col-2" alt="">
     </div>
   </div>
 
 
   <div class="powers2 col-6">
     <div class="container-fluid spell">
-    <img src="icons_spells/pluie de feu.jpg" alt="" class="img-fluid col-2 offset-1">
-    <img src="icons_spells/énergie pure.jpg" alt="" class="img-fluid col-2">
-    <img src="icons_spells/hachoir.jpg" alt="" class="img-fluid col-2">
+    <img src="${J2champ[1].img}" alt="" class="img-fluid col-2 offset-1">
+    <img src="${J2champ[2].img}" alt="" class="img-fluid col-2">
+    <img src="${J2champ[3].img}" alt="" class="img-fluid col-2">
   </div>
   </div>
 </div>
@@ -46,13 +46,13 @@ export const fight = (J1champ, J2champ) => {
   let force = 1
   let fight = 1
 
-  power1 = ((J1champ.powerstats.power + pouv) + (J1champ.powerstats.intelligence + int) + (J1champ.powerstats.strength + force) + (J1champ.powerstats.combat + fight)) / 4
-  // image1 = resJson.images.sm
- //document.getElementById('hero1').innerHTML = `<img src="${J1champ.images.sm}" class="img-fluid" >`
+power1 = ((J1champ[0].powerstats.power + pouv) + (J1champ[0].powerstats.intelligence + int) + (J1champ[0].powerstats.strength + force) + (J1champ[0].powerstats.combat + fight)) / 4
+image1 = J1champ[0].images.sm
+document.getElementById('hero1').innerHTML = `<img src="${image1}" class="img-fluid" >`
 
-power2 = (J2champ.powerstats.power + J2champ.powerstats.intelligence + J2champ.powerstats.strength + J2champ.powerstats.combat) / 4
-  // image2 = resJson.images.sm
-  // document.getElementById('hero2').innerHTML = `<img src="${resJson.images.sm}" class="img-fluid">`
+power2 = (J2champ[0].powerstats.power + J2champ[0].powerstats.intelligence + J2champ[0].powerstats.strength + J2champ[0].powerstats.combat) / 4
+image2 = J2champ[0].images.sm
+document.getElementById('hero2').innerHTML = `<img src="${image2}" class="img-fluid">`
 
 
   let life1 = 100

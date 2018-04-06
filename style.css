@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    height: 15vh;
+    height: 8vh;
     background-color: black;
     display: flex;
     align-items: center;
@@ -32,10 +32,12 @@ header {
 #main_container {
     display: flex;
     background-color: #000;
-    height: 93vh;
+    height: 92vh;
     width: 100%;
 }
-
+#main{
+    height: 92vh;
+}
 #left_container {
     display: flex;
     width: 50%;
@@ -239,50 +241,62 @@ footer .footer-center.active {
  background-image: url("images/arena2.gif");
   border:2px solid black;
   background-size: cover;
+  height : 100%;
 
 }
 #arena1{
   background-image: url("images/arena3.gif");
    border:2px solid black;
    background-size: cover;
+   height : 100%;
+
  
  }
  #arena2{
   background-image: url("images/arena4.gif");
    border:2px solid black;
    background-size: cover;
+   height : 100%;
+
  
  }
  #arena3{
   background-image: url("images/arena5.gif");
    border:2px solid black;
    background-size: cover;
+   height : 100%;
+
  
  }
  #arena4{
   background-image: url("images/arena6.gif");
    border:2px solid black;
    background-size: cover;
+   height : 100%;
+
  
  }
  #arena5{
   background-image: url("images/arena7.gif");
    border:2px solid black;
    background-size: cover;
- 
+   height : 100%;
+
  }
  #arena6{
   background-image: url("images/arena8.gif");
    border:2px solid black;
    background-size: cover;
- 
+   height : 100%;
+
  }
 
  #arena7{
   background-image: url("images/arena9.gif");
    border:2px solid black;
    background-size: cover;
- 
+   height : 100%;
+
  }
 .baredevie{
   display:flex;
@@ -301,12 +315,12 @@ footer .footer-center.active {
   margin-top: 4%;
 }
 #superheros{
-
-  margin-top: 23% !important;
+    height : 430px;
 }
 #hero1{
   padding-left: 10%;
   padding-right: 10%;
+  align-self: flex-end;
 }
 
 #hero1 img {
@@ -314,7 +328,6 @@ footer .footer-center.active {
   -moz-box-shadow: 8px 8px 12px #EFFF00; 
   -webkit-box-shadow: 8px 8px 12px #EFFF00; 
   box-shadow: 3px 3px 30px #FFFFFF; 
-  margin-bottom: 100px;
 
 }
 
@@ -323,13 +336,14 @@ footer .footer-center.active {
   -moz-box-shadow: 8px 8px 12px #EFFF00; 
   -webkit-box-shadow: 8px 8px 12px #EFFF00; 
   box-shadow: 3px 3px 30px #FFFFFF; 
-  margin-bottom: 100px;
 }
 
 
 #hero2{
   padding-left: 10%;
   padding-right: 10%;
+  align-self: flex-end;
+
 }
 .powers{
   margin-top: 3%
