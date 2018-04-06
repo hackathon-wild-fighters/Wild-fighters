@@ -71,7 +71,8 @@ let life1 = 100
 let life2 = 100
 const audio = new Audio('songs/coup.mp3');
 const audio2 = new Audio('songs/coup2.mp3');
-
+const MusicMenu = new Audio('songs/menuMusic.mp3');
+MusicMenu.play()
 //  barre de vie
 const lifeBar = (lifeHero, idName, lifeMax) => {
   document.getElementById(idName).innerHTML = `<div class="progress">
