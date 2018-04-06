@@ -69,6 +69,9 @@ fetch(`https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/${random()}.json
 
 let life1 = 100
 let life2 = 100
+const audio = new Audio('songs/coup.mp3');
+const audio2 = new Audio('songs/coup2.mp3');
+
 //  barre de vie
 const lifeBar = (lifeHero, idName, lifeMax) => {
   document.getElementById(idName).innerHTML = `<div class="progress">
@@ -88,6 +91,7 @@ document.addEventListener('keydown', (event) => {
   if (keyName === 'ArrowLeft') {
     life1 -= Math.floor(power1 / 5)
     console.log(life1)
+    audio.play();
     if(life1>0){
     lifeBar(life1, 'bareDeVie1', life1)
   
@@ -111,6 +115,7 @@ document.addEventListener('keydown', (event) => {
   if (keyName === 'e') {
     life2 -= Math.floor(power2 / 5)
     console.log(life2)
+    audio2.play();
     if(life2>0){
     lifeBar(life2, 'bareDeVie2', life2)
     document.getElementById('superheros').innerHTML = `
