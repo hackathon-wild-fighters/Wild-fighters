@@ -16,25 +16,35 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
 
     poolHeroJ1.map(elem => { 
         if (elem.name === player1id)
-            document.getElementById('info-perso1').innerHTML = `Name : ${elem.name} <br>
-        Combat : ${elem.powerstats.combat} <br>
-        Intelligence : ${elem.powerstats.intelligence} <br>
-        Force : ${elem.powerstats.strength} <br>
-        Vitesse : ${elem.powerstats.speed} <br>
-        Durabilité : ${elem.powerstats.durability} <br>
-        Puissance : ${elem.powerstats.power}
+            document.getElementById('info-perso1').innerHTML = `
+        <div class="skills_perso1">
+            <div>
+                <span class="name_perso1">${elem.name}</span><br><br>
+                Combat : ${elem.powerstats.combat}<br>
+                Intelligence : ${elem.powerstats.intelligence}<br>
+                Force : ${elem.powerstats.strength}<br>
+                Vitesse : ${elem.powerstats.speed}<br>
+                Durabilité : ${elem.powerstats.durability}<br>
+                Puissance : ${elem.powerstats.power}
+            </div>
+        </div>
         `
     })
 
     poolHeroJ2.map(elem => { 
         if (elem.name === player2id)
-            document.getElementById('info-perso2').innerHTML = `Name : ${elem.name}  <br>
-        Combat : ${elem.powerstats.combat} <br>
-        Intelligence : ${elem.powerstats.intelligence} <br>
-        Force : ${elem.powerstats.strength} <br>
-        Vitesse : ${elem.powerstats.speed} <br>
-        Durabilité : ${elem.powerstats.durability} <br>
-        Puissance : ${elem.powerstats.power}
+            document.getElementById('info-perso2').innerHTML = `
+        <div class="skills_perso2">
+            <div>
+                <span class="name_perso2">${elem.name}</span><br><br>
+                Combat : ${elem.powerstats.combat}<br>
+                Intelligence : ${elem.powerstats.intelligence}<br>
+                Force : ${elem.powerstats.strength}<br>
+                Vitesse : ${elem.powerstats.speed}<br>
+                Durabilité : ${elem.powerstats.durability}<br>
+                Puissance : ${elem.powerstats.power}
+            </div>
+        </div>
         `
     })
 
@@ -53,21 +63,21 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
         const prev2 = activeTabPlayer2.previousElementSibling
 
 
-
-
-
-
-
         const injectJ1info = () => {
             poolHeroJ1.map(elem => { 
                 if (elem.name === player1id)
-                    document.getElementById('info-perso1').innerHTML = `Name : ${elem.name} <br>
-                Combat : ${elem.powerstats.combat} <br>
-                Intelligence : ${elem.powerstats.intelligence} <br>
-                Force : ${elem.powerstats.strength} <br>
-                Vitesse : ${elem.powerstats.speed} <br>
-                Durabilité : ${elem.powerstats.durability} <br>
-                Puissance : ${elem.powerstats.power}
+                    document.getElementById('info-perso1').innerHTML = `
+                <div class="skills_perso1">
+                    <div>
+                        <span class="name_perso1">${elem.name}</span><br><br>
+                        Combat : ${elem.powerstats.combat}<br>
+                        Intelligence : ${elem.powerstats.intelligence}<br>
+                        Force : ${elem.powerstats.strength}<br>
+                        Vitesse : ${elem.powerstats.speed}<br>
+                        Durabilité : ${elem.powerstats.durability}<br>
+                        Puissance : ${elem.powerstats.power}
+                    </div>
+                </div>
                 `
             })
         }
@@ -75,13 +85,18 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
         const injectJ2info = () => {
             poolHeroJ2.map(elem => { 
                 if (elem.name === player2id)
-                    document.getElementById('info-perso2').innerHTML = `Name : ${elem.name} <br>
-                Combat : ${elem.powerstats.combat} <br>
-                Intelligence : ${elem.powerstats.intelligence} <br>
-                Force : ${elem.powerstats.strength} <br>
-                Vitesse : ${elem.powerstats.speed} <br>
-                Durabilité : ${elem.powerstats.durability} <br>
-                Puissance : ${elem.powerstats.power}
+                    document.getElementById('info-perso2').innerHTML = `
+                <div class="skills_perso2">
+                    <div>
+                        <span class="name_perso2">${elem.name}</span><br><br>
+                        Combat : ${elem.powerstats.combat}<br>
+                        Intelligence : ${elem.powerstats.intelligence}<br>
+                        Force : ${elem.powerstats.strength}<br>
+                        Vitesse : ${elem.powerstats.speed}<br>
+                        Durabilité : ${elem.powerstats.durability}<br>
+                        Puissance : ${elem.powerstats.power}
+                    </div>
+                </div>
                 `
             })
         }
