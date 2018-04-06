@@ -7,7 +7,10 @@ let image2 = ''
 
 let power1 = ''
 let power2 = ''
-
+let pouv = 1
+let int = 1
+let force = 1
+let fight = 1
 
 /* "intelligence": 88,
       "strength": 28,
@@ -19,7 +22,7 @@ let power2 = ''
 fetch(`https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/id/${random()}.json`)
   .then(res => res.json())
   .then(resJson => {
-    power1 = (resJson.powerstats.power + resJson.powerstats.intelligence + resJson.powerstats.strength + resJson.powerstats.combat) / 4
+    power1 = ((resJson.powerstats.power + pouv)+ (resJson.powerstats.intelligence + int) + (resJson.powerstats.strength + force) + (resJson.powerstats.combat + fight)) / 4
     image1 = resJson.images.sm
     document.getElementById('hero1').innerHTML = `<img src="${resJson.images.sm}" class="img-fluid" >`
   })
@@ -49,26 +52,43 @@ lifeBar(life2, 'bareDeVie2', life2)
 document.addEventListener('keydown', (event) => {
   let keyName = event.key
   console.log(event.key)
-  if (keyName === 'e') {
+  if (keyName === 'ArrowLeft') {
     life1 -= Math.floor(power1 / 5)
     console.log(life1)
+    if(life1>0){
     lifeBar(life1, 'bareDeVie1', life1)
+  
     document.getElementById('superheros').innerHTML = `
     <div id="hero1" class="col-4 offset-1 dmgEffect"><img src="${image1}" class="img-fluid"></div>
     <div id="hero2" class="col-4 offset-2"><img src="${image2}" class="img-fluid"></div>
     `
+    }else{
+      lifeBar(0, 'bareDeVie1', 0)
+      document.getElementById('superheros').innerHTML = `
+    <div id="hero1" class="col-4 offset-1  gameover">GAME OVER</div>
+    <div id="hero2" class="col-4 offset-2"><img src="${image2}" class="img-fluid"></div>
+    `}
+    
   }
 })
 
 document.addEventListener('keydown', (event) => {
   let keyName = event.key
   console.log(event.key)
-  if (keyName === 'ArrowLeft') {
+  if (keyName === 'e') {
     life2 -= Math.floor(power2 / 5)
+    console.log(life2)
+    if(life2>0){
     lifeBar(life2, 'bareDeVie2', life2)
     document.getElementById('superheros').innerHTML = `
     <div id="hero1" class="col-4 offset-1"><img src="${image1}" class="img-fluid"></div>
     <div id="hero2" class="col-4 offset-2 dmgEffect"><img src="${image2}" class="img-fluid"></div>
     `
+    }else{
+      lifeBar(0, 'bareDeVie2', 0)
+      document.getElementById('superheros').innerHTML = `
+    <div id="hero1" class="col-4 offset-1  "><img src="${image1}" class="img-fluid"></div>
+    <div id="hero2" class="col-4 offset-2 gameover">GAME OVER</div>`
+    }
   }
 })

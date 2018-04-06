@@ -66,5 +66,9 @@
 		opacity: 1;
   }
 }
-
+.gameover{
+  color:red;
+  font-size: 100px;
+  padding-left: -10px;
+}
 
