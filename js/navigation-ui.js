@@ -2,6 +2,37 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
     const leftTab = document.querySelectorAll('#perso_grid .img_perso')
     const rightTab = document.querySelectorAll('#perso_grid2 .img_perso')
 
+    const spells = [
+        { "spell": "tourbillon de lames", "img": "spellList/icons_spells/tourbillonDeLames.jpg" },
+        { "spell": "toucher corrosif", "img": "spellList/icons_spells/toucherCorrosif.jpg" },
+        { "spell": "toucher contaminé", "img": "spellList/icons_spells/toucherContamine.jpg" },
+        { "spell": "Terres brûlées", "img": "spellList/icons_spells/terresBrulees.jpg" },
+        { "spell": "souffle de glace", "img": "spellList/icons_spells/souffleDeGlace.jpg" },
+        { "spell": "Rayon plasma", "img": "spellList/icons_spells/rayonPlasma.jpg" },
+        { "spell": "putréfaction", "img": "spellList/icons_spells/putrefaction.jpg" },
+        { "spell": "points de suture", "img": "spellList/icons_spells/pointsDeSuture.jpg" },
+        { "spell": "pluie de feu", "img": "spellList/icons_spells/pluieDeFeu.jpg" },
+        { "spell": "Nuage de poison", "img": "spellList/icons_spells/nuageDePoison.jpg" },
+        { "spell": "mur de flamme", "img": "spellList/icons_spells/murDeFlamme.jpg" },
+        { "spell": "hachoir", "img": "spellList/icons_spells/hachoir.jpg" },
+        { "spell": "gel", "img": "spellList/icons_spells/gel.jpg" },
+        { "spell": "Fulgurance des arcanes", "img": "spellList/icons_spells/fulguranceDesArcanes.jpg" },
+        { "spell": "Exécution", "img": "spellList/icons_spells/execution.jpg" },
+        { "spell": "étreinte fantomatique", "img": "spellList/icons_spells/etreinteFantomatique.jpg" },
+        { "spell": "entailles sanglantes", "img": "spellList/icons_spells/entaillesSanglantes.jpg" },
+        { "spell": "énergie pure", "img": "spellList/icons_spells/energiePure.jpg" },
+        { "spell": "energie noire", "img": "spellList/icons_spells/energieNoire.jpg" },
+        { "spell": "crochet sanglant", "img": "spellList/icons_spells/crochetSanglant.jpg" },
+        { "spell": "chaine d'éclairs", "img": "spellList/icons_spells/chaineEclairs.jpg" },
+        { "spell": "caresse élémentaire", "img": "spellList/icons_spells/caresseElementaire.jpg" },
+        { "spell": "brise-crâne", "img": "spellList/icons_spells/briseCrane.jpg" },
+        { "spell": "brasier elementaire", "img": "spellList/icons_spells/brasierElementaire.jpg" },
+        { "spell": "attaque toxique", "img": "spellList/icons_spells/attaqueToxique.jpg" },
+        { "spell": "attaque du phénix", "img": "spellList/icons_spells/attaqueDuPhenix.jpg" },
+        { "spell": "attaque cérébral", "img": "spellList/icons_spells/attaqueCerebral.jpg" },
+        { "spell": "pluie de plasma", "img": "spellList/icons_spells/pluieDePlasma.jpg" },
+        { "spell": "mauvais contact", "img": "spellList/icons_spells/mauvaisContact.jpg" }
+    ]
     let currentPositionPlayer1 = 0
     let currentPositionPlayer2 = 0
 
@@ -22,7 +53,7 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
     let player2id = document.querySelector('#perso_grid2 .active').id
 
     //inject stats on loadingc
-    poolHeroJ1.map(elem => { 
+    poolHeroJ1.map(elem => {
         if (elem.name === player1id)
             document.getElementById('info-perso1').innerHTML = `
         <div class="skills_perso1">
@@ -38,9 +69,9 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
         </div>
         `
     })
-    
+
     //inject stats on loadingc
-    poolHeroJ2.map(elem => { 
+    poolHeroJ2.map(elem => {
         if (elem.name === player2id)
             document.getElementById('info-perso2').innerHTML = `
         <div class="skills_perso2">
@@ -73,7 +104,7 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
 
 
         const injectJ1info = () => {
-            poolHeroJ1.map(elem => { 
+            poolHeroJ1.map(elem => {
                 if (elem.name === player1id)
                     document.getElementById('info-perso1').innerHTML = `
                 <div class="skills_perso1">
@@ -92,7 +123,7 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
         }
 
         const injectJ2info = () => {
-            poolHeroJ2.map(elem => { 
+            poolHeroJ2.map(elem => {
                 if (elem.name === player2id)
                     document.getElementById('info-perso2').innerHTML = `
                 <div class="skills_perso2">
@@ -155,10 +186,10 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
         }
 
         // verrouiller son héros J1
-        if (e.which === 69){
+        if (e.which === 69) {
             player1id = document.querySelector('#perso_grid .active').id
             let i = 0
-            while (poolHeroJ1[i]){
+            while (poolHeroJ1[i]) {
                 if (player1id === poolHeroJ1[i].name)
                     player1selection[0] = poolHeroJ1[i]
                 i++
@@ -207,10 +238,10 @@ export const navigation = (poolHeroJ1, poolHeroJ2) => {
         }
 
         // verrouiller son héros J2
-        if (e.which === 16){
+        if (e.which === 16) {
             player2id = document.querySelector('#perso_grid2 .active').id
             let i = 0
-            while (poolHeroJ2[i]){
+            while (poolHeroJ2[i]) {
                 if (player2id === poolHeroJ2[i].name)
                     player2selection[0] = poolHeroJ2[i]
                 i++

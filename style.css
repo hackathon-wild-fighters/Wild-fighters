@@ -124,12 +124,12 @@ header {
 
 .info_perso {
     width: 100%;
-    height: 42%;
+    height: 55%;
 }
 
 .info_powers {
     width: 100%;
-    height: 58%;
+    height: 45%;
 }
 
 .img_perso  {
@@ -228,3 +228,170 @@ footer .footer-center.active {
     opacity: 1;
     color: green;
 }
+
+#arena8{
+ background-image: url("images/arena2.gif");
+  border:2px solid black;
+  background-size: cover;
+
+}
+#arena1{
+  background-image: url("images/arena3.gif");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+ #arena2{
+  background-image: url("images/arena4.gif");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+ #arena3{
+  background-image: url("images/arena5.gif");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+ #arena4{
+  background-image: url("images/arena6.gif");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+ #arena5{
+  background-image: url("images/arena7.gif");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+ #arena6{
+  background-image: url("images/arena8.gif");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+
+ #arena7{
+  background-image: url("images/arena9.gif");
+   border:2px solid black;
+   background-size: cover;
+ 
+ }
+.baredevie{
+  display:flex;
+}
+#bareDeVie1{
+ text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 4%;
+}
+
+#bareDeVie2{
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 4%;
+}
+#superheros{
+
+  margin-top: 23% !important;
+}
+#hero1{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#hero1 img {
+  border: 5px solid #EFFF00;
+  -moz-box-shadow: 8px 8px 12px #EFFF00; 
+  -webkit-box-shadow: 8px 8px 12px #EFFF00; 
+  box-shadow: 3px 3px 30px #FFFFFF; 
+  margin-bottom: 100px;
+
+}
+
+#hero2 img {
+  border: 5px solid #EFFF00;
+  -moz-box-shadow: 8px 8px 12px #EFFF00; 
+  -webkit-box-shadow: 8px 8px 12px #EFFF00; 
+  box-shadow: 3px 3px 30px #FFFFFF; 
+  margin-bottom: 100px;
+}
+
+
+#hero2{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.powers{
+  margin-top: 3%
+}
+.powers1{
+  padding-left: 150px !important;
+}
+.powers2{
+  padding-left: 150px !important;
+}
+
+.spell img {
+  width: 100px;
+  border: 2px solid #EFFF00;
+  -moz-box-shadow: 8px 8px 12px #EFFF00; 
+  -webkit-box-shadow: 8px 8px 12px #EFFF00; 
+  box-shadow: 3px 3px 30px #FFFFFF; 
+  padding-left: 0;
+  padding-right: 0;
+  
+}
+
+.dmgEffect {
+  background: url('3.png') no-repeat;
+  background-size: 80%;
+  opacity: 1;
+	-webkit-animation: flash 3.0s;
+	animation: flash 3.0s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .1;
+	}
+	100% {
+		opacity: 1;
+  }
+}
+.gameover{
+  color:red;
+  font-size: 100px;
+  margin-top: -10px;
+  
+  
+}
+.dmg2{
+  background: url('3.png') no-repeat;
+  background-size: 80%;
+}
+.dmg2>img{
+  transform: rotate(180deg) scale(0.50);
+}
+
+.dmg3{
+  background: url('3.png') no-repeat;
+  background-size: 80%;
+}
+.dmg3>img{
+  transform: rotate(90deg) scale(0.90);
+}
+.gagne{
+  transform: scale(2);
+}
+

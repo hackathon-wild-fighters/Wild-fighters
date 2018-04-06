@@ -41,12 +41,12 @@ fetch("https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json")
 	let poolSpellJ2 = []
 	let i = 0
 
-	//random spell * 10
+	//random spell * 3
 	const fillPoolSpell = poolSpell => 
 	{
 		let j = 0
 		let lol
-		while (poolSpell.length < 10)
+		while (poolSpell.length < 3)
 		{
 			lol = spells[(Math.floor(Math.random() * 29))]
 			if (poolSpell.includes(lol))
