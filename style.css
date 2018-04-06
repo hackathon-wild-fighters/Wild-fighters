@@ -5,29 +5,30 @@ body {
 }
 
 header {
-    height: 10vh;
+    height: 15vh;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    position : absolute;
-    width : 40%;
-    top : 0;
-    z-index : 10;
-    left : 0;
-    right : 0;
-    margin : 0 auto;
+    position: absolute;
+    width: 40%;
+    top: 0;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .title {
     font-family: "VT323", monospace;
-    font-size: 50px;
+    font-size: 55px;
     text-transform: uppercase;
 }
 
 *{
     box-sizing: border-box;
 }
+
 #main_container {
     display: flex;
     background-color: #000;
@@ -38,11 +39,13 @@ header {
 #left_container {
     display: flex;
     width: 50%;
+    border-right: 1px solid white;
 }
 
 #right_container {
     display: flex;
     width: 50%;
+    border-left: 1px solid white;
 }
 
 #perso_grid {
@@ -60,7 +63,7 @@ header {
 .info_container {
     width: 40%;
     background-color: black;
-    padding-top : 14vh;
+    padding-top: 14vh;
 }
 
 .title_perso, .title_powers  {
@@ -69,6 +72,40 @@ header {
     font-size: 25px;
     text-align: center;
     text-transform: uppercase;
+}
+
+.skills_perso1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 25px;
+    padding-right: 40px; 
+    font-family: "VT323", monospace;
+    font-size: 23px;
+    text-align: right;
+    text-transform: uppercase; 
+}
+
+.skills_perso2 {
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    padding-left: 40px; 
+    font-family: "VT323", monospace;
+    font-size: 23px;
+    text-align: left;
+    text-transform: uppercase; 
+}
+
+.name_perso1 {
+    color: gold;
+    font-size: 33px;
+
+}
+
+.name_perso2 {
+    color: red;
+    font-size: 33px;
 }
 
 .info_perso {
@@ -85,34 +122,45 @@ header {
     display: flex;
     width: 33.3%;
     height: 25%;
-    padding : 0.2rem;
+    padding: 0.2rem;
 }
 #perso_grid .img_perso.active img{
-    border : 2px solid gold;
+    border: 2px solid gold;
 }
 #perso_grid2 .img_perso.active img{
-    border : 2px solid red;
+    border: 2px solid red;
 }
 
 .img_perso.active img{
-    filter : grayscale(0%);
+    filter: grayscale(0%);
 }
 .img_perso img{
     object-fit: cover;
     object-position: 50% 50%;
     width: 100%;
-    filter : grayscale(100%);
+    filter: grayscale(100%);
 } 
 footer{
-    display : flex;
+    display: flex;
     text-align: center;
     align-items: center;
     background-color: #000;
-    height : 7vh;
+    height: 7vh;
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    text-transform: uppercase; 
 }
 footer .footer-side{
-    width : 30%;
+    width: 30%;
 }
+
 footer .footer-center{
-    width : 40%;
+    width: 40%;
+    font-size: 30px;
+    opacity: 0.3;
+}
+
+footer .footer-center.active {
+    opacity: 1;
+    color: green;
 }
