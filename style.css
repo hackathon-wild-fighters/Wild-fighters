@@ -8,44 +8,44 @@
   background-image: url("images/arena3.jpg");
    border:2px solid black;
    background-size: cover;
- 
+
  }
  #arena2{
   background-image: url("images/arena4.jpg");
    border:2px solid black;
    background-size: cover;
- 
+
  }
  #arena3{
   background-image: url("images/arena5.jpg");
    border:2px solid black;
    background-size: cover;
- 
+
  }
  #arena4{
   background-image: url("images/arena6.jpg");
    border:2px solid black;
    background-size: cover;
- 
+
  }
  #arena5{
   background-image: url("images/arena7.png");
    border:2px solid black;
    background-size: cover;
- 
+
  }
  #arena6{
   background-image: url("images/arena8.jpg");
    border:2px solid black;
    background-size: cover;
- 
+
  }
 
  #arena7{
   background-image: url("images/arena9.jpg");
    border:2px solid black;
    background-size: cover;
- 
+
  }
 .baredevie{
   display:flex;
@@ -113,6 +113,28 @@
   color:red;
   font-size: 100px;
   margin-top: -10px;
-  
-}
 
+}
+.dmg2>img{
+  -webkit-transform: rotate(180deg) scale(0.45);
+	transform: rotate(180deg) scale(0.45);
+
+}
+.dmg2{
+  background: url('3.png') no-repeat;
+  background-size: 80%;
+
+}
+.dmg3>img{
+  -webkit-transform: rotate(90deg) scale(0.9);
+	transform: rotate(90deg) scale(0.9);
+}
+.dmg3{
+  background: url('3.png') no-repeat;
+  background-size: 80%;
+
+}
+.gagne{
+  transform: scale(1.5)
+
+}
