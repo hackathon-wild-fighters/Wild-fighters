@@ -1,3 +1,7 @@
+body {
+  max-height: 100vh;
+}
+
 #arena8{
  background-image: url("images/arena2.gif");
   border:2px solid black;
@@ -98,10 +102,21 @@
   margin-top: 3%
 }
 .powers1{
-  padding-left: 100px !important;
+  padding-left: 150px !important;
 }
 .powers2{
-  padding-left: 100px !important;
+  padding-left: 150px !important;
+}
+
+.spell img {
+  width: 100px;
+  border: 2px solid #EFFF00;
+  -moz-box-shadow: 8px 8px 12px #EFFF00; 
+  -webkit-box-shadow: 8px 8px 12px #EFFF00; 
+  box-shadow: 3px 3px 30px #FFFFFF; 
+  padding-left: 0;
+  padding-right: 0;
+  
 }
 
 .dmgEffect {

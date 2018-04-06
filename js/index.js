@@ -13,7 +13,7 @@ document.getElementById('main').innerHTML =`<div id="arena${randomBackground()}"
 </div>
 <div class="powers row">
   <div class="powers1 col-6 ">
-    <div class="container-fluid">
+    <div class="container-fluid spell" >
     <img src="icons_spells/attaque cérébral.jpg" class="img-fluid col-2 offset-1" alt="" >
     <img src="icons_spells/attaque du phénix.jpg" class="img-fluid col-2 " alt="">
     <img src="icons_spells/attaque toxique.jpg" class="img-fluid col-2" alt="">
@@ -22,7 +22,7 @@ document.getElementById('main').innerHTML =`<div id="arena${randomBackground()}"
 
 
   <div class="powers2 col-6">
-    <div class="container-fluid">
+    <div class="container-fluid spell">
     <img src="icons_spells/pluie de feu.jpg" alt="" class="img-fluid col-2 offset-1">
     <img src="icons_spells/énergie pure.jpg" alt="" class="img-fluid col-2">
     <img src="icons_spells/hachoir.jpg" alt="" class="img-fluid col-2">
