@@ -62,9 +62,11 @@ power2 = ((J2champ[0].powerstats.power + pouv) + (J2champ[0].powerstats.intellig
 image2 = J2champ[0].images.sm
 document.getElementById('hero2').innerHTML = `<img src="${image2}" class="img-fluid">`
 
+  const qs = new URLParams(window.location.search)
+  const life = qs.get('life') || 100
 
-  let life1 = 1000
-  let life2 = 1000
+  let life1 = life  
+  let life2 = life
   const audio = new Audio('songs/coup.mp3');
   const audio2 = new Audio('songs/coup2.mp3');
 
