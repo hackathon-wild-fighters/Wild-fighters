@@ -63,8 +63,8 @@ image2 = J2champ[0].images.sm
 document.getElementById('hero2').innerHTML = `<img src="${image2}" class="img-fluid">`
 
 
-  let life1 = 100
-  let life2 = 100
+  let life1 = 1000
+  let life2 = 1000
   const audio = new Audio('songs/coup.mp3');
   const audio2 = new Audio('songs/coup2.mp3');
 
